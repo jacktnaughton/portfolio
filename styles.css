@@ -1,13 +1,3 @@
-/* General Styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-    text-align: center;
-    scroll-behavior: smooth;
-}
-
 /* Navigation Bar */
 nav {
     background: #1a1a1a;
@@ -26,8 +16,9 @@ nav {
     cursor: pointer;
     color: #fff;
     position: absolute;
-    right: 20px;
+    right: 20px;   /* Move it 20px from the right edge */
     top: 10px;
+    z-index: 1001;  /* Ensure the hamburger is above other content */
 }
 
 nav ul {
@@ -150,6 +141,7 @@ footer {
 
     .menu-toggle {
         display: block;
+        right: 20px;  /* Ensure it's 20px from the right edge */
     }
 
     nav ul.active {
@@ -168,4 +160,3 @@ footer {
         font-size: 1.2em;
     }
 }
-
