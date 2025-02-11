@@ -26,8 +26,8 @@ nav {
     cursor: pointer;
     color: #fff;
     position: absolute;
-    right: 20px;
-    top: 10px;
+    left: 20px; /* Move to the left side */
+    top: 10px;  /* Keep it at the top */
 }
 
 nav ul {
@@ -61,6 +61,7 @@ section {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    padding: 0 15px; /* Add padding to avoid text too close to edges */
 }
 
 .intro h1 {
@@ -166,5 +167,9 @@ footer {
 
     .typing {
         font-size: 1.2em;
+    }
+
+    #home {
+        padding: 0 20px;  /* Add some padding for mobile */
     }
 }
