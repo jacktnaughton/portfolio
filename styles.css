@@ -8,20 +8,32 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
     background: #1a1a1a;
-    padding: 15px 0;
+    padding: 15px;
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -38,77 +50,117 @@ nav a:hover {
 
 /* Sections */
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     min-height: 100vh;
 }
 
-/* Home */
+/* Home Section */
 #home {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to right, #1c1c1c, #111);
+    text-align: center;
 }
 
 .intro h1 {
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 .name {
     color: #4CAF50;
 }
 
-/* Typing Animation */
 .typing {
-    font-size: 22px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #4CAF50;
-    display: inline-block;
-    width: 0;
-    animation: typing 3s steps(40, end) forwards;
+    font-size: 1.5em;
+    color: #aaa;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+/* About Section */
+#about {
+    max-width: 800px;
+    margin: auto;
 }
 
-/* Projects */
-.projects-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Research Section */
+#research {
+    max-width: 800px;
+    margin: auto;
 }
 
 .project-card {
     background: #1e1e1e;
     padding: 20px;
-    width: 300px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 700px;
     border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 15px rgba(76, 175, 80, 0.5);
+/* Images inside Research Projects */
+.project-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-/* Contact */
-a {
+/* Contact Section */
+#contact {
+    max-width: 600px;
+    margin: auto;
+}
+
+#contact a {
     color: #4CAF50;
     text-decoration: none;
 }
 
-a:hover {
+#contact a:hover {
     text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    padding: 20px;
+    padding: 10px;
     background: #1a1a1a;
+    text-align: center;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1a1a1a;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .typing {
+        font-size: 1.2em;
+    }
 }
 

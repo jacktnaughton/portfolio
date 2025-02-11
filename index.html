@@ -3,79 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Naughton - Portfolio</title>
+    <title>John Naughton's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <span class="menu-toggle">&#9776;</span>  <!-- Mobile Menu -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
     <section id="home">
         <div class="intro">
-            <h1>Hi, I'm <span class="name">Jack Naughton</span></h1>
-            <p class="typing">Data Science | Deep Learning | Sports 
-Analytics</p>
+            <h1>Hi, I'm <span class="name">John Naughton</span></h1>
+            <p class="typing">Data Scientist | Researcher | Blockchain 
+Enthusiast</p>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a data science student with a passion for deep learning and 
-sports analytics. Currently researching athlete performance consistency 
-using autoencoders.</p>
+        <p>I'm a senior Data Science student at the University of Oregon, 
+conducting research in deep learning and sports science. Passionate about 
+data-driven insights, AI, and blockchain.</p>
     </section>
 
-<!-- Research Section -->
+    <!-- Research Section -->
     <section id="research">
-        <h2>Research Projects</h2>
-
-        <!-- Project 1 -->
+        <h2>Research: Autoencoders for Jump Analysis</h2>
         <div class="project-card">
             <h3>Analyzing Athlete Jump Consistency</h3>
             <p>Using autoencoders to analyze force-time curves in sports 
 science.</p>
-            <img src="images/force-curve.png" alt="Force Curve Analysis" 
-class="project-image">
-            <p><strong>Key Finding:</strong> Athletes become more 
-consistent with training.</p>
+
+            <h4>Jump Normalization</h4>
+            <img src="images/normalized_length.png" alt="Normalized Jump 
+Length" class="project-image">
+            <p><strong>Explanation:</strong> Jumps were normalized based 
+on when force was zero, representing takeoff.</p>
+
+            <h4>Reconstructed Jumps</h4>
+            <img src="images/reconstructed_jumps.png" alt="Reconstructed 
+Jumps" class="project-image">
+            <p><strong>Key Finding:</strong> Athletes' jump force curves 
+become more consistent with training.</p>
+
             <p><strong>Technologies:</strong> Python, PyTorch, 
 Autoencoders</p>
             <a href="https://github.com/YOUR-GITHUB-USERNAME/project" 
 target="_blank">View on GitHub</a>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-            <h3>Deep Learning for Sports Analytics</h3>
-            <p>Exploring convolutional neural networks (CNNs) to analyze 
-movement patterns.</p>
-            <img src="images/deep-learning-sports.png" alt="Deep Learning 
-for Sports" class="project-image">
-            <p><strong>Key Finding:</strong> CNNs can predict movement 
-efficiency with high accuracy.</p>
-            <p><strong>Technologies:</strong> TensorFlow, Python, Neural 
-Networks</p>
-            <a href="https://github.com/YOUR-GITHUB-USERNAME/cnn-sports" 
-target="_blank">View on GitHub</a>
-        </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:jtn@uoregon.edu">jtn@uoregon.edu</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/john-t-naughton" 
 target="_blank">linkedin.com/in/john-t-naughton</a></p>
+        <p>GitHub: <a href="https://github.com/YOUR-GITHUB-USERNAME" 
+target="_blank">github.com/YOUR-GITHUB-USERNAME</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Jack Naughton</p>
+        <p>&copy; 2025 John Naughton. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
