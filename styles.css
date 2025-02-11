@@ -74,6 +74,11 @@ section {
 .typing {
     font-size: 1.5em;
     color: #aaa;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #4CAF50;  /* Green cursor effect */
+    display: inline-block;
 }
 
 /* About Section */
