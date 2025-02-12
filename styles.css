@@ -117,6 +117,31 @@ section {
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
+/* Music Section */
+#music {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+#music h2 {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+#music a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+#music a:hover {
+    color: #4CAF50;
+}
+
+
 /* Contact Section */
 #contact {
     max-width: 600px;
