@@ -53,8 +53,8 @@ nav a:hover {
 
 /* Sections */
 section {
-    padding: 80px 20px;
-    min-height: 100vh;
+    padding: 40px 20px;
+    margin-bottom: 20px;
 }
 
 /* Home Section */
