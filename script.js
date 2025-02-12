@@ -1,6 +1,6 @@
 // Typing Effect
 const typingEffect = document.getElementById('typing-effect');
-const text = "Data Scientist | Researcher | Sports Analytics";
+const text = "Data Scientist | Researcher | Analyst";
 let i = 0;
 
 function type() {
