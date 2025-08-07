@@ -284,3 +284,20 @@ canvas {
 .resume-button:hover {
     background-color: #45a049;
 }
+.mobile-tableau-link {
+    display: none;
+    margin-top: 20px;
+}
+
+.mobile-tableau-link a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .mobile-tableau-link {
+        display: block;
+    }
+}
