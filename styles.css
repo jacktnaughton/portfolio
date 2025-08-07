@@ -268,7 +268,18 @@ canvas {
 }
 
 .tableauPlaceholder object {
+    width: 1000px !important;
+    height: 750px !important;
     max-width: 100%;
-    height: auto;
+    max-height: 90vh;
     margin: auto;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .tableauPlaceholder object {
+        width: 100% !important;
+        height: auto !important;
+    }
 }

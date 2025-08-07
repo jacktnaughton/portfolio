@@ -126,8 +126,11 @@
         const height = width * 0.65;
 
         vizElement.style.display = 'block';
-        vizElement.style.width = width + 'px';
-        vizElement.style.height = height + 'px';
+        vizElement.style.width = '1000px';
+        vizElement.style.height = '750px';
+        vizElement.style.maxWidth = '100%';  // Prevents overflow on small screens
+        vizElement.style.maxHeight = '90vh';
+
 
         const scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
