@@ -10,6 +10,45 @@ function type() {
         setTimeout(type, 100);  // Adjust speed here (100 ms per character)
     }
 }
+let pdfDoc = null,
+    pageNum = 1,
+    pageRendering = false,
+    canvas = document.getElementById('pdf-canvas'),
+    ctx = canvas.getContext('2d');
+
+const url = 'images/cmj_presentation.pdf';
+
+pdfjsLib.getDocument(url).promise.then(doc => {
+    pdfDoc = doc;
+    renderPage(pageNum);
+});
+
+function renderPage(num) {
+    pageRendering = true;
+    pdfDoc.getPage(num).then(page => {
+        const viewport = page.getViewport({ scale: 1.5 });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        page.render({ canvasContext: ctx, viewport: viewport }).promise.then(() => {
+            pageRendering = false;
+            document.getElementById('page-info').textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
+        });
+    });
+}
+
+function prevPage() {
+    if (pageNum <= 1) return;
+    pageNum--;
+    renderPage(pageNum);
+}
+
+function nextPage() {
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    renderPage(pageNum);
+}
+
 
 window.onload = type;
 // Hamburger Menu Toggle

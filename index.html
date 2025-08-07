@@ -34,41 +34,23 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I’m currently a senior Data Science student at the University of Oregon, where I’m building a strong foundation in data analysis, machine learning, and deep learning. My academic journey has been deeply focused on applying data-driven techniques to real-world problems, with a particular interest in sports science. I’m passionate about uncovering insights that drive better performance, especially when it comes to understanding the biomechanics of athletes and improving training methodologies. My work combines both theory and practical application, and I’m always eager to explore new ways to push the boundaries of what data science can achieve.</p>
+        <p>I recently graduated with a degree in Data Science from the University of Oregon, where I focused on data analysis, marketing, and deep learning. My work centered around applying data-driven methods to real-world problems, with a special interest in sports science and athlete performance. I'm passionate about uncovering insights that drive better outcomes—especially when it comes to health and fitness and improving training strategies.</p>
 
-        <p>Alongside my academic work, I’ve been actively conducting research in deep learning, applying autoencoders to understand patterns in force curves and athlete movements. I’m also focused on sports analytics, specifically how training and recovery influence athletic performance over time. With a strong analytical mindset, I aim to bridge the gap between sports science and advanced AI techniques. Ultimately, I strive to contribute to a more data-driven approach to athletic development, and I’m excited by the potential impact of this research on the future of sports science and performance optimization.</p>
+        <p>During my time at Oregon, I conducted research using deep learning models like autoencoders to analyze force-time curves and identify patterns in athlete movement. I also explored how training and recovery influence performance over time through sports analytics. With a strong analytical mindset and a background in both data science and applied research, I aim to bridge the gap between cutting-edge AI techniques and the evolving world of athletic development. I'm excited about contributing to data-informed training approaches and pushing the boundaries of performance optimization.</p>
     </section>
 
     <!-- Research Section -->
     <section id="research">
-        <h2>Research: Autoencoders for Jump Analysis</h2>
-        <div class="project-card">
-            <h3>Analyzing Athlete Jump Consistency</h3>
-            <p>Using autoencoders to analyze force-time curves in sports
-science.</p>
+      <h4>CMJ Presentation</h4>
+      <div id="pdf-viewer">
+          <canvas id="pdf-canvas"></canvas>
+          <div class="pdf-controls">
+              <button onclick="prevPage()">Previous</button>
+              <span id="page-info"></span>
+              <button onclick="nextPage()">Next</button>
+          </div>
+      </div>
 
-            <h4>Jump Normalization</h4>
-            <img src="images/normalized_length.png" alt="Normalized Jump
-Length" class="project-image">
-            <p><strong>Explanation:</strong> Jumps were normalized based
-on when forces read zero, representing the athlete's takeoff.</p>
-
-            <h4>Reconstructed Jumps</h4>
-            <img src="images/reconstructed_jumps.png" alt="Reconstructed
-Jumps" class="project-image">
-            <h4>Latent Space Differences Over Time</h4>
-            <img src="images/boxplot_training_years.png" alt="Boxplot of Training Years" class="project-image">
-            <p><strong>Explanation:</strong> The latent space differences decrease over time, indicating improvements in athlete consistency in their jump shapes.</p>
-
-            <h4>Impact of Weight on Latent Space & Reconstruction</h4>
-            <img src="images/region_1.png" alt="Region 1" class="project-image">
-            <img src="images/region_2.png" alt="Region 2" class="project-image">
-            <img src="images/region_3.png" alt="Region 3" class="project-image">
-            <p><strong>Key Finding:</strong> As weight increases, the initial peak flattens out rather than showing two peaks as seen in lower-weight athletes. This is representative of more tension during the takeoff in athletes with higher weight values.</p>
-
-            <h4>Principal Component 1 (PC1) and Jump Height</h4>
-            <img src="images/latent_height_vector.png" alt="Latent Height Vector" class="project-image">
-            <p><strong>Insight:</strong> PC1 is positively correlated with jump height, showing its impact on the mean latent space jump representation.</p>
 
             <p><strong>Technologies:</strong> Python, PyTorch,
 Autoencoders</p>
@@ -100,7 +82,7 @@ target="_blank">github.com/jacktnaughton</a></p>
     <footer>
         <p>&copy; 2025 John Naughton. All Rights Reserved.</p>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
