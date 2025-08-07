@@ -69,7 +69,7 @@ function nextPage() {
 }
 
 
-window.onload = type;
+
 // Hamburger Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('nav ul');
