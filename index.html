@@ -60,52 +60,56 @@ Autoencoders</p>
             <a href="https://github.com/jacktnaughton/countermovement-jump-analysis/tree/master"
 target="_blank">View on GitHub</a>
             <h4>Project Synopsis</h4>
-            <p>This project explores the use of autoencoders to analyze the consistency of athletes' jumps, focusing on the force-time curves during the jump cycle. Autoencoders, a type of neural network, were applied to identify patterns in force application over time. The primary goal was to normalize jump data based on the moment of takeoff (when force is zero), making it possible to compare jumps across different trials more effectively. Additionally, reconstructed jump profiles were analyzed to assess jump quality and identify potential areas for improvement in an athlete’s performance. The project also aims to link this data-driven analysis with improved training methodologies, potentially guiding better training and recovery strategies for athletes.</p>
+            <p>This project explores the use of variational autoencoders (VAEs) to analyze and cluster athlete jump patterns based on force-time curves. VAEs were trained to learn compressed representations of each jump, capturing key features of the takeoff, flight, and landing phases. By mapping these representations into a latent space, we were able to group similar jumps and distinguish between higher- and lower-performing athletes. Jumps with greater predicted heights showed distinct latent space characteristics, including steeper propulsive phases and higher relative peak forces. These findings were used to generate reconstructed jump profiles, offering insight into the movement strategies associated with better performance. The project ultimately supports a more data-driven approach to training by identifying biomechanical patterns linked to jump quality and consistency.</p>
+
 
         </div>
     </section>
-    <section id="dashboard">
-    <h2>Spotify Wrapped Dashboard</h2>
-    <p>This dashboard visualizes my personal Spotify listening data from 2024–2025.</p>
+<section id="dashboard">
+  <h2>Spotify Wrapped Dashboard</h2>
+  <p>This dashboard visualizes my personal Spotify listening data using Tableau Public.</p>
 
-    <div class="tableauPlaceholder" id="viz1754596658099" style="position: relative;">
-        <noscript>
-            <a href="#"><img alt="Jack Naughton's 2024-2025 Spotify Wrapped" src="https://public.tableau.com/static/images/XB/XBZTWCTB6/1_rss.png" style="border: none" /></a>
-        </noscript>
-        <object class="tableauViz" style="display: none;">
-            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-            <param name="embed_code_version" value="3" />
-            <param name="path" value="shared&#47;XBZTWCTB6" />
-            <param name="toolbar" value="yes" />
-            <param name="static_image" value="https://public.tableau.com/static/images/XB/XBZTWCTB6/1.png" />
-            <param name="animate_transition" value="yes" />
-            <param name="display_static_image" value="yes" />
-            <param name="display_spinner" value="yes" />
-            <param name="display_overlay" value="yes" />
-            <param name="display_count" value="yes" />
-            <param name="language" value="en-US" />
-        </object>
+  <div class="tableau-container">
+    <div class='tableauPlaceholder' id='viz1754596658099' style='position: relative'>
+      <noscript>
+        <a href='#'><img alt='Jack Naughton&#39;s 2024-2025 Spotify Wrapped'
+        src='https://public.tableau.com/static/images/XB/XBZTWCTB6/1_rss.png' style='border: none' /></a>
+      </noscript>
+      <object class='tableauViz' style='display: none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='shared&#47;XBZTWCTB6' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/XB/XBZTWCTB6/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+      </object>
     </div>
+  </div>
 
-    <script type="text/javascript">
-        var divElement = document.getElementById('viz1754596658099');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if (divElement.offsetWidth > 800) {
-            vizElement.style.width = '100%';
-            vizElement.style.height = (divElement.offsetWidth * 0.6) + 'px';
-        } else if (divElement.offsetWidth > 500) {
-            vizElement.style.width = '100%';
-            vizElement.style.height = (divElement.offsetWidth * 0.8) + 'px';
-        } else {
-            vizElement.style.width = '100%';
-            vizElement.style.height = '1127px';
-        }
-
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1754596658099');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.6) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+      vizElement.style.width = '100%';
+      vizElement.style.height = '1000px';
+    }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
 </section>
+
 
 
     <!-- Contact Section -->
