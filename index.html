@@ -88,8 +88,6 @@
     </section>
     <a href="images/john_naughton_resume_final.pdf" download class="resume-button">Download My Resume (PDF)</a>
 
-
-
     <!-- Music Section -->
     <section id="music">
         <h2>Check Out My Music</h2>
@@ -105,40 +103,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
     <script src="script.js"></script>
     <script>
-    window.onload = function () {
-        // Typing effect
-        const typingEffect = document.getElementById('typing-effect');
-        const text = "Data Scientist | Researcher | Analyst";
-        let i = 0;
+        window.onload = function () {
+            // Typing effect
+            const typingEffect = document.getElementById('typing-effect');
+            const text = "Data Scientist | Researcher | Analyst";
+            let i = 0;
 
-        function type() {
-            if (i < text.length) {
-                typingEffect.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, 100);
+            function type() {
+                if (i < text.length) {
+                    typingEffect.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                }
             }
-        }
-        type();
+            type();
 
-        // Tableau setup
-        const divElement = document.getElementById('viz1754596658099');
-        const vizElement = divElement.getElementsByTagName('object')[0];
+            // Tableau setup
+            const divElement = document.getElementById('viz1754596658099');
+            const vizElement = divElement.getElementsByTagName('object')[0];
 
-        const maxWidth = 1000;
-        const width = Math.min(divElement.offsetWidth, maxWidth);
-        const height = width * 0.65;
+            if (divElement.offsetWidth > 800) {
+                vizElement.style.width = '1200px';
+                vizElement.style.minHeight = '877px';
+                vizElement.style.maxHeight = '887px';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            } else if (divElement.offsetWidth > 500) {
+                vizElement.style.width = '1200px';
+                vizElement.style.minHeight = '877px';
+                vizElement.style.maxHeight = '887px';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            } else {
+                vizElement.style.width = '100%';
+                vizElement.style.height = '1127px';
+            }
 
-        vizElement.style.display = 'block';
-        vizElement.style.width = '1000px';
-        vizElement.style.height = '750px';
-        vizElement.style.maxWidth = '100%';  // Prevents overflow on small screens
-        vizElement.style.maxHeight = '90vh';
-
-
-        const scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    };
+            const scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        };
     </script>
 </body>
 </html>

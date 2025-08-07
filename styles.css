@@ -19,9 +19,8 @@ nav {
     z-index: 1000;
     display: flex;
     justify-content: center;
-    margin: 0;  /* Ensure no margin */
+    margin: 0;
 }
-
 
 .menu-toggle {
     display: none;
@@ -29,8 +28,8 @@ nav {
     cursor: pointer;
     color: #fff;
     position: absolute;
-    left: 20px; /* Move to the left side */
-    top: 10px;  /* Keep it at the top */
+    left: 20px;
+    top: 10px;
 }
 
 nav ul {
@@ -64,7 +63,7 @@ section {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    padding: 0 15px; /* Add padding to avoid text too close to edges */
+    padding: 0 15px;
 }
 
 .intro h1 {
@@ -81,7 +80,7 @@ section {
     font-weight: normal;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #4CAF50;  /* Green cursor effect */
+    border-right: 3px solid #4CAF50;
     display: inline-block;
 }
 
@@ -141,7 +140,6 @@ section {
     color: #4CAF50;
 }
 
-
 /* Contact Section */
 #contact {
     max-width: 600px;
@@ -165,7 +163,6 @@ footer {
     color: #bbb;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -198,7 +195,7 @@ footer {
     }
 
     #home {
-        padding: 0 20px;  /* Add some padding for mobile */
+        padding: 0 20px;
     }
 }
 
@@ -210,8 +207,6 @@ footer {
     max-width: 700px;
     text-align: center;
 }
-
-
 
 canvas {
     display: block;
@@ -240,7 +235,6 @@ canvas {
     justify-content: center;
 }
 
-
 #dashboard {
     max-width: 1000px;
     margin: 40px auto;
@@ -260,6 +254,7 @@ canvas {
     color: #ccc;
     margin-bottom: 20px;
 }
+
 .tableau-container {
     display: flex;
     justify-content: center;
@@ -289,12 +284,4 @@ canvas {
 
 .resume-button:hover {
     background-color: #45a049;
-}
-
-
-@media (max-width: 768px) {
-    .tableauPlaceholder object {
-        width: 100% !important;
-        height: auto !important;
-    }
 }
