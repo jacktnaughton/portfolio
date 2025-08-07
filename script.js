@@ -31,7 +31,6 @@ function renderPage(num) {
         const baseScale = window.innerWidth < 768 ? 0.5 : 0.8;
         const viewport = page.getViewport({ scale: baseScale });
 
-        // Handle high-DPI screens
         const outputScale = window.devicePixelRatio || 1;
 
         canvas.width = viewport.width * outputScale;
@@ -39,10 +38,12 @@ function renderPage(num) {
         canvas.style.width = viewport.width + 'px';
         canvas.style.height = viewport.height + 'px';
 
+        // ✅ Set scaling transform for sharp rendering
+        ctx.setTransform(outputScale, 0, 0, outputScale, 0, 0);
+
         const renderContext = {
             canvasContext: ctx,
             viewport: viewport,
-            transform: [outputScale, 0, 0, outputScale, 0, 0], // upscale content
         };
 
         page.render(renderContext).promise.then(() => {
@@ -51,6 +52,7 @@ function renderPage(num) {
         });
     });
 }
+
 
 
 
