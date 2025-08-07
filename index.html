@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Naughton's Portfolio</title>
 
-    <link rel="icon" href="images/j_favicon.png" type="image/png">  <!-- For desktop browsers -->
-    <link rel="apple-touch-icon" href="images/j_favicon.png">  <!-- For mobile devices -->
-
+    <link rel="icon" href="images/j_favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/j_favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
-        <span class="menu-toggle">&#9776;</span>  <!-- Mobile Menu -->
+        <span class="menu-toggle">&#9776;</span>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -35,94 +33,58 @@
     <section id="about">
         <h2>About Me</h2>
         <p>I recently graduated with a degree in Data Science from the University of Oregon, where I focused on data analysis, marketing, and deep learning. My work centered around applying data-driven methods to real-world problems, with a special interest in sports science and athlete performance. I'm passionate about uncovering insights that drive better outcomes—especially when it comes to health and fitness and improving training strategies.</p>
-
         <p>During my time at Oregon, I conducted research using deep learning models like autoencoders to analyze force-time curves and identify patterns in athlete movement. I also explored how training and recovery influence performance over time through sports analytics. With a strong analytical mindset and a background in both data science and applied research, I aim to bridge the gap between cutting-edge AI techniques and the evolving world of athletic development. I'm excited about contributing to data-informed training approaches and pushing the boundaries of performance optimization.</p>
     </section>
 
     <!-- Research Section -->
     <section id="research">
-      <h4>CMJ Presentation</h4>
-      <div id="pdf-viewer">
-          <div class="canvas-wrapper">
-              <canvas id="pdf-canvas"></canvas>
-          </div>
-          <div class="pdf-controls">
-              <button onclick="prevPage()">Previous</button>
-              <span id="page-info"></span>
-              <button onclick="nextPage()">Next</button>
-          </div>
-      </div>
+        <h4>CMJ Presentation</h4>
+        <div id="pdf-viewer">
+            <div class="canvas-wrapper">
+                <canvas id="pdf-canvas"></canvas>
+            </div>
+            <div class="pdf-controls">
+                <button onclick="prevPage()">Previous</button>
+                <span id="page-info"></span>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+        <p><strong>Technologies:</strong> Python, PyTorch, Autoencoders</p>
+        <a href="https://github.com/jacktnaughton/countermovement-jump-analysis/tree/master" target="_blank">View on GitHub</a>
+        <h4>Project Synopsis</h4>
+        <p>This project explores the use of variational autoencoders (VAEs) to analyze and cluster athlete jump patterns based on force-time curves. VAEs were trained to learn compressed representations of each jump, capturing key features of the takeoff, flight, and landing phases. By mapping these representations into a latent space, we were able to group similar jumps and distinguish between higher- and lower-performing athletes. Jumps with greater predicted heights showed distinct latent space characteristics, including steeper propulsive phases and higher relative peak forces. These findings were used to generate reconstructed jump profiles, offering insight into the movement strategies associated with better performance. The project ultimately supports a more data-driven approach to training by identifying biomechanical patterns linked to jump quality and consistency.</p>
+    </section>
 
-
-
-            <p><strong>Technologies:</strong> Python, PyTorch,
-Autoencoders</p>
-            <a href="https://github.com/jacktnaughton/countermovement-jump-analysis/tree/master"
-target="_blank">View on GitHub</a>
-            <h4>Project Synopsis</h4>
-            <p>This project explores the use of variational autoencoders (VAEs) to analyze and cluster athlete jump patterns based on force-time curves. VAEs were trained to learn compressed representations of each jump, capturing key features of the takeoff, flight, and landing phases. By mapping these representations into a latent space, we were able to group similar jumps and distinguish between higher- and lower-performing athletes. Jumps with greater predicted heights showed distinct latent space characteristics, including steeper propulsive phases and higher relative peak forces. These findings were used to generate reconstructed jump profiles, offering insight into the movement strategies associated with better performance. The project ultimately supports a more data-driven approach to training by identifying biomechanical patterns linked to jump quality and consistency.</p>
-
-
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+        <h2>Spotify Wrapped Dashboard</h2>
+        <p>This dashboard visualizes my personal Spotify listening data using Tableau Public.</p>
+        <div class="tableau-container">
+            <div class='tableauPlaceholder' id='viz1754596658099' style='position: relative'>
+                <noscript><a href='#'><img alt='Jack Naughton&#39;s 2024-2025 Spotify Wrapped' src='https://public.tableau.com/static/images/XB/XBZTWCTB6/1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display: block;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared&#47;XBZTWCTB6' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/XB/XBZTWCTB6/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
         </div>
     </section>
-<section id="dashboard">
-  <h2>Spotify Wrapped Dashboard</h2>
-  <p>This dashboard visualizes my personal Spotify listening data using Tableau Public.</p>
-
-  <div class="tableau-container">
-    <div class='tableauPlaceholder' id='viz1754596658099' style='position: relative'>
-      <noscript>
-        <a href='#'><img alt='Jack Naughton&#39;s 2024-2025 Spotify Wrapped'
-        src='https://public.tableau.com/static/images/XB/XBZTWCTB6/1_rss.png' style='border: none' /></a>
-      </noscript>
-      <object class='tableauViz' style='display: none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='path' value='shared&#47;XBZTWCTB6' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/XB/XBZTWCTB6/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-      </object>
-    </div>
-  </div>
-
-  <script type='text/javascript'>
-    window.onload = function () {
-      const divElement = document.getElementById('viz1754596658099');
-      const vizElement = divElement.getElementsByTagName('object')[0];
-
-      const maxWidth = 700; // limit width for better fit
-
-      const width = Math.min(divElement.offsetWidth, maxWidth);
-      const height = width * 0.75;
-
-      vizElement.style.width = width + 'px';
-      vizElement.style.height = height + 'px';
-
-      const scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    };
-  </script>
-
-
-</section>
-
-
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:jtn@uoregon.edu">jacktnaugthon@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/john-t-naughton"
-target="_blank">linkedin.com/in/john-t-naughton</a></p>
-        <p>GitHub: <a href="https://github.com/jacktnaughton"
-target="_blank">github.com/jacktnaughton</a></p>
+        <p>Email: <a href="mailto:jacktnaughton@gmail.com">jacktnaughton@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/john-t-naughton" target="_blank">linkedin.com/in/john-t-naughton</a></p>
+        <p>GitHub: <a href="https://github.com/jacktnaughton" target="_blank">github.com/jacktnaughton</a></p>
     </section>
 
     <!-- Music Section -->
@@ -135,7 +97,42 @@ target="_blank">github.com/jacktnaughton</a></p>
     <footer>
         <p>&copy; 2025 John Naughton. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
     <script src="script.js"></script>
+    <script>
+    window.onload = function () {
+        // Typing effect
+        const typingEffect = document.getElementById('typing-effect');
+        const text = "Data Scientist | Researcher | Analyst";
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                typingEffect.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 100);
+            }
+        }
+        type();
+
+        // Tableau setup
+        const divElement = document.getElementById('viz1754596658099');
+        const vizElement = divElement.getElementsByTagName('object')[0];
+
+        const maxWidth = 700;
+        const width = Math.min(divElement.offsetWidth, maxWidth);
+        const height = width * 0.75;
+
+        vizElement.style.display = 'block';
+        vizElement.style.width = width + 'px';
+        vizElement.style.height = height + 'px';
+
+        const scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    };
+    </script>
 </body>
 </html>
