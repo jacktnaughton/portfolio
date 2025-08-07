@@ -25,8 +25,15 @@ pdfjsLib.getDocument(url).promise.then(doc => {
 
 function renderPage(num) {
     pageRendering = true;
+
     pdfDoc.getPage(num).then(page => {
-        const viewport = page.getViewport({ scale: 1.5 });
+        // Dynamically scale based on container width
+        const container = document.getElementById('pdf-viewer');
+        const desiredWidth = container.clientWidth;
+        const unscaledViewport = page.getViewport({ scale: 1 });
+        const scale = desiredWidth / unscaledViewport.width;
+        const viewport = page.getViewport({ scale });
+
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
@@ -36,6 +43,7 @@ function renderPage(num) {
         });
     });
 }
+
 
 function prevPage() {
     if (pageNum <= 1) return;
