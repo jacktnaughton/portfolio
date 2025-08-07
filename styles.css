@@ -260,9 +260,7 @@ canvas {
     color: #ccc;
     margin-bottom: 20px;
 }
-
 .tableau-container {
-    width: 100%;
     display: flex;
     justify-content: center;
     overflow-x: auto;
