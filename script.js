@@ -29,10 +29,10 @@ function renderPage(num) {
     pdfDoc.getPage(num).then(page => {
         // Dynamically scale based on container width
         const container = document.getElementById('pdf-viewer');
-        const desiredWidth = container.clientWidth;
-        const unscaledViewport = page.getViewport({ scale: 1 });
-        const scale = desiredWidth / unscaledViewport.width;
-        const viewport = page.getViewport({ scale });
+        const baseScale = window.innerWidth < 768 ? 0.5 : 0.8;
+        const viewport = page.getViewport({ scale: baseScale });
+
+
 
         canvas.height = viewport.height;
         canvas.width = viewport.width;
