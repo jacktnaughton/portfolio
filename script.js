@@ -27,22 +27,31 @@ function renderPage(num) {
     pageRendering = true;
 
     pdfDoc.getPage(num).then(page => {
-        // Dynamically scale based on container width
         const container = document.getElementById('pdf-viewer');
         const baseScale = window.innerWidth < 768 ? 0.5 : 0.8;
         const viewport = page.getViewport({ scale: baseScale });
 
+        // Handle high-DPI screens
+        const outputScale = window.devicePixelRatio || 1;
 
+        canvas.width = viewport.width * outputScale;
+        canvas.height = viewport.height * outputScale;
+        canvas.style.width = viewport.width + 'px';
+        canvas.style.height = viewport.height + 'px';
 
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport,
+            transform: [outputScale, 0, 0, outputScale, 0, 0], // upscale content
+        };
 
-        page.render({ canvasContext: ctx, viewport: viewport }).promise.then(() => {
+        page.render(renderContext).promise.then(() => {
             pageRendering = false;
             document.getElementById('page-info').textContent = `Page ${pageNum} of ${pdfDoc.numPages}`;
         });
     });
 }
+
 
 
 function prevPage() {
